@@ -27,13 +27,10 @@ def translate_document(
         }
     )
 
-    # To output the translated document, uncomment the code below.
     f = open(output_path, 'wb')
     f.write(response.document_translation.byte_stream_outputs[0])
     f.close()
 
-    # If not provided in the TranslationRequest, the translated file will only be returned through a byte-stream
-    # and its output mime type will be the same as the input file's mime type
     print(
         f"File saved to: {output_path}. Detected Language Code was {response.document_translation.detected_language_code}"
     )
