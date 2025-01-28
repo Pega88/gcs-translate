@@ -6,6 +6,7 @@ def translate_document(
     output_path: str,
     project_id: str,
     location: str,
+    target_language: str,
 ) -> translate_v3.TranslationServiceClient:
 
 
@@ -21,7 +22,7 @@ def translate_document(
     response = client.translate_document(
         request={
             "parent": parent,
-            "target_language_code": "en",
+            "target_language_code": target_language,
             "document_input_config": document_input_config,
         }
     )
@@ -39,4 +40,4 @@ def translate_document(
 
     return response
 
-translate_document("gs://my-gcs-bucket/file.pdf","/Users/johndoe/Documents/test.pdf","pega88-sandbox","us-central1")
+translate_document("gs://my-gcs-bucket/file.pdf","/Users/johndoe/Documents/test.pdf","pega88-sandbox","us-central1","en")
