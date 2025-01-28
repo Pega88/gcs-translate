@@ -1,5 +1,6 @@
 from google.cloud import translate_v3
 
+#TODO auth - relies on Application Default Creds atm
 
 def translate_document(
     input_path: str,
