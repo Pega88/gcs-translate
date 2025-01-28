@@ -37,4 +37,4 @@ def translate_document(
 
     return response
 
-translate_document("gs://my-gcs-bucket/file.pdf","/Users/johndoe/Documents/test.pdf","pega88-sandbox","us-central1","en")
+translate_document("gs://my-gcs-bucket/file.pdf","/Users/johndoe/Documents/test.pdf","my-project","us-central1","en")
